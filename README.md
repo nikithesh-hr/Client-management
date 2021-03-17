@@ -22,7 +22,10 @@ npm i
 
 Set environmental variables by creating dev.sh
 
-export MONGODB_URI=""
-export NODE_ENV=""
-export PORT=""
+export MONGODB_URI="";
+
+export NODE_ENV="";
+
+export PORT="";
+
 
