@@ -20,12 +20,14 @@ npm i -g nodemon
 npm i
 
 
-Set environmental variables by creating dev.sh
+##Set environmental variables by creating dev.sh
 
 export MONGODB_URI="";
 
 export NODE_ENV="";
 
 export PORT="";
+
+#Set jwt key value
 
 
