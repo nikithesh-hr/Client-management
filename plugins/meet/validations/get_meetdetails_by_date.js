@@ -1,9 +1,8 @@
 "use strict";
 
-const Joi = require("@hapi/joi").extend(require("@hapi/joi-date"));
-
+ const Joi = require('joi');
 module.exports = {
   params: Joi.object({
-    date_of_meet: Joi.date().format("YYYY-MM-DD").utc().required()
+    date_of_meet: Joi.date().iso().required()
    }),
 };

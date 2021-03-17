@@ -1,7 +1,6 @@
 "use strict";
 
-const Joi = require("@hapi/joi").extend(require("@hapi/joi-date"));
-
+const Joi = require('joi');
 const contact = Joi.object({
   name: Joi.string().required(),
   email: Joi.string().required(),
@@ -24,7 +23,7 @@ module.exports = {
     syllabus: Joi.string().valid('CBSE','ICSE', 'SSLC', 'IGCSE', 'PU', 'DEGREE') ,
     email: Joi.string() ,
     website: Joi.string() ,
-    date_of_meeting: Joi.date().format("YYYY-MM-DD").utc() ,
+    date_of_meeting: Joi.date().iso() ,
     message: Joi.string() ,
   }),
 };

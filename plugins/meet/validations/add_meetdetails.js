@@ -1,6 +1,6 @@
-const Joi = require("@hapi/joi").extend(require("@hapi/joi-date"));
+"use strict";
 
-
+const Joi = require('joi');
 const contact = Joi.object({
   title: Joi.string().required(),
   name: Joi.string().required(),
@@ -11,7 +11,7 @@ const contact = Joi.object({
 
 module.exports = {
   payload: Joi.object({
-    date_of_meet: Joi.date().format("YYYY-MM-DD").utc().required(),
+    date_of_meet: Joi.date().iso().required(),
     place_of_meet: Joi.string().required(),
     point_of_contact : Joi.array().items(contact),
     follow_up_person: Joi.string().required(),

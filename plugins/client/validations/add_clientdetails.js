@@ -1,4 +1,4 @@
-const Joi = require("@hapi/joi").extend(require("@hapi/joi-date"));
+const Joi =  require('joi');
 
 
 const contact = Joi.object({
@@ -21,7 +21,7 @@ module.exports = {
     syllabus: Joi.string().required().valid('CBSE','ICSE', 'SSLC', 'IGCSE', 'PU', 'DEGREE'),
     email: Joi.string().required(),
     website: Joi.string().required(),
-    date_of_meeting: Joi.date().format("YYYY-MM-DD").utc().required(),
+    date_of_meeting: Joi.date().iso().required(),
     message: Joi.string().required(),
   }),
 };
